@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure full viewport height */
+  padding-top: 60px; /* Prevent content from being hidden behind the fixed navbar */
+  padding-bottom: 50px; /* Prevent content from overlapping the fixed footer */
+}
+
+/* Header Styling */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  text-align: center;
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.header nav ul li {
+  margin: 0 1rem;
+}
+
+.header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Main Content */
+main {
+  flex: 1; /* Push footer to bottom */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Section Styling */
+.home, .about, .projects, .contact {
+  text-align: center;
+  box-sizing: border-box;
+  width: min( 100%, 800px);
+  padding: 2rem;
+  margin: auto;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Contact Page Styling */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1; /* Ensure it fills the available space */
+  background-color: #f9f9f9;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: min(100%, 400px);
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  width: 100px; /* Adjust width to align labels properly */
+  text-align: right;
+  margin-right: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+  flex: 1;
+  width: 100%; /* Makes all input fields the same width */
+  padding: 5px;
+}
